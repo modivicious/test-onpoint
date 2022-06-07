@@ -6,20 +6,30 @@ import styles from "./Slider.module.scss";
 
 const Slider = ({
   children,
+  activeIndex = null,
   width = "100vw",
   height = "100vh",
   threshold = 100,
+  changeActiveSlide = null,
 }) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   const startPos = useRef(0);
-  const currIndex = useRef(0);
+  const currIndex = useRef(activeIndex || 0);
   const sliderRef = useRef("slider");
 
   useLayoutEffect(() => {
     const currDimensions = getElementDimensions(sliderRef);
     setDimensions(currDimensions);
+    setPositionByIndex(currDimensions.width);
   }, []);
+
+  useEffect(() => {
+    if (currIndex.current !== activeIndex) {
+      currIndex.current = activeIndex;
+      setPositionByIndex();
+    }
+  }, [activeIndex]);
 
   useEffect(() => {
     const resize = () => {
@@ -37,6 +47,7 @@ const Slider = ({
 
   const setPositionByIndex = (w = dimensions.width) => {
     setSliderPosition(currIndex.current * -w);
+    changeActiveSlide && changeActiveSlide(currIndex.current);
   };
 
   const setSliderPosition = (translate) => {
