@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  & > *:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.homeBtn {
+  width: 22px;
+  height: 19px;
+  background-image: url("../../../images/icons/home.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.separator {
+  width: 1px;
+  height: 25px;
+  background-color: #282828;
+}
+
+.name {
+  font-family: "Circe-Regular";
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #272727;
+}
