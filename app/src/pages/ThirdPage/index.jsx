@@ -8,6 +8,11 @@ import styles from "./ThirdPage.module.scss";
 
 const ThirdPage = () => {
   const [isModalActive, setIsModalActive] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const changeActiveSlide = (index) => {
+    setActiveSlide(index);
+  };
 
   return (
     <div className={`${styles.wrapper} backgroundImage`}>
@@ -47,7 +52,14 @@ const ThirdPage = () => {
               </h2>
             </div>
             <div className="counterParent">
-              <Slider width="500px" height="333px">
+              <Slider
+                width="500px"
+                height="auto"
+                threshold={70}
+                activeIndex={activeSlide}
+                changeActiveSlide={changeActiveSlide}
+                controls
+              >
                 <div>
                   <div className="listItem">
                     <p>

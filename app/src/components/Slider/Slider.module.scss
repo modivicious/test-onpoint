@@ -19,3 +19,51 @@
     height: 100%;
   }
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+
+  margin-top: 55px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotsItem {
+  display: flex;
+  padding: 3px 5px;
+
+  &.active .dot {
+    background-color: #fc6da9;
+    border-color: #fc6da9;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid #060606;
+  border-radius: 50%;
+}
+
+.controlArrow {
+  width: 9px;
+  height: 15px;
+}
+
+.controlArrowPrev {
+  margin-right: 17px;
+
+  background-image: url("../../../images/icons/angle-left.svg");
+}
+
+.controlArrowNext {
+  margin-left: 17px;
+
+  background-image: url("../../../images/icons/angle-right.svg");
+}

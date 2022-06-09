@@ -6,16 +6,17 @@ import styles from "./Slider.module.scss";
 
 const Slider = ({
   children,
-  activeIndex = null,
+  activeIndex = 0,
   width = "100vw",
   height = "100vh",
   threshold = 100,
   changeActiveSlide = null,
+  controls = false,
 }) => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   const startPos = useRef(0);
-  const currIndex = useRef(activeIndex || 0);
+  const currIndex = useRef(activeIndex);
   const sliderRef = useRef("slider");
 
   useLayoutEffect(() => {
@@ -45,13 +46,27 @@ const Slider = ({
     };
   }, []);
 
-  const setPositionByIndex = (w = dimensions.width) => {
-    setSliderPosition(currIndex.current * -w);
+  const updateActiveSlide = (index = currIndex.current) => {
+    currIndex.current = index;
+    setPositionByIndex();
     changeActiveSlide && changeActiveSlide(currIndex.current);
   };
 
-  const setSliderPosition = (translate) => {
-    sliderRef.current.style.transform = `translateX(${translate}px)`;
+  const setPositionByIndex = (w = dimensions.width) => {
+    setSliderPosition(currIndex.current * -w);
+  };
+
+  const setSliderPosition = (positionX) => {
+    sliderRef.current.style.transform = `translateX(${positionX}px)`;
+  };
+
+  const goToNextSlide = () => {
+    if (currIndex.current < children.length - 1)
+      updateActiveSlide(currIndex.current + 1);
+  };
+
+  const goToPrevSlide = () => {
+    if (currIndex.current > 0) updateActiveSlide(currIndex.current - 1);
   };
 
   const touchStart = (index) => {
@@ -64,12 +79,8 @@ const Slider = ({
   const touchEnd = (e) => {
     const movedBy = e.changedTouches[0].clientX - startPos.current;
 
-    if (movedBy < -threshold && currIndex.current < children.length - 1)
-      currIndex.current += 1;
-    else if (movedBy > threshold && currIndex.current > 0)
-      currIndex.current -= 1;
-
-    setPositionByIndex();
+    if (movedBy < -threshold) goToNextSlide();
+    else if (movedBy > threshold) goToPrevSlide();
   };
 
   return (
@@ -89,6 +100,41 @@ const Slider = ({
           </div>
         ))}
       </div>
+
+      {controls && (
+        <div className={styles.controls}>
+          <button
+            className={`${styles.controlArrow} ${styles.controlArrowPrev} backgroundImage`}
+            onClick={goToPrevSlide}
+            type="button"
+          />
+          <ul className={styles.dots}>
+            {children.map((item, index) => {
+              return (
+                <li
+                  key={index - 1000}
+                  className={
+                    currIndex.current === index
+                      ? `${styles.dotsItem} ${styles.active}`
+                      : styles.dotsItem
+                  }
+                >
+                  <button
+                    className={styles.dot}
+                    onClick={() => updateActiveSlide(index)}
+                    type="button"
+                  />
+                </li>
+              );
+            })}
+          </ul>
+          <button
+            className={`${styles.controlArrow} ${styles.controlArrowNext} backgroundImage`}
+            onClick={goToNextSlide}
+            type="button"
+          />
+        </div>
+      )}
     </div>
   );
 };
