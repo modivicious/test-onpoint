@@ -5,9 +5,10 @@ import Footer from "./components/Footer";
 import Slider from "./components/Slider";
 import Home from "./pages/Home";
 import SecondPage from "./pages/SecondPage";
+import ThirdPage from "./pages/ThirdPage";
 
 const App = () => {
-  const [activePage, setActivePage] = useState(1);
+  const [activePage, setActivePage] = useState(2);
 
   const changeActivePage = (index) => {
     setActivePage(index);
@@ -19,8 +20,7 @@ const App = () => {
       <Slider activeIndex={activePage} changeActiveSlide={changeActivePage}>
         <Home changeActivePage={changeActivePage} />
         <SecondPage />
-        <div>item 3</div>
-        <div>item 4</div>
+        <ThirdPage />
       </Slider>
       <Footer />
     </>

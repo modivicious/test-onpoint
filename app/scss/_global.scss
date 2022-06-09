@@ -10,3 +10,23 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+.mainTitle {
+  font-family: "Gilroy-Regular";
+  font-size: 95px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: #242424;
+}
+
+.mainTitleBold {
+  font-family: "Gilroy-Extrabold";
+}
+
+.mainBoxShadow {
+  box-shadow: 3px 4px 115px 9px rgba(157, 185, 198, 0.39);
+}
+
+body {
+  font-family: "DINPro";
+}
