@@ -1,0 +1,45 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  padding-top: 122px;
+
+  background-color: rgba(22, 39, 62, 0.7);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  min-height: 300px;
+  height: max-content;
+
+  padding: 40px 112px 33px 213px;
+  margin: 0 62px 0 auto;
+
+  background-color: #fff;
+  border-radius: 40px;
+
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+
+  width: 34px;
+  height: 34px;
+
+  background-image: url("../../../images/icons/close.png");
+}
