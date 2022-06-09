@@ -4,6 +4,8 @@
 
 .content {
   padding: 162px 0 0 67px;
+  position: relative;
+  z-index: 30;
 }
 
 .text {
@@ -35,4 +37,119 @@
   position: absolute;
   bottom: 17px;
   right: 109px;
+}
+
+.decorImg {
+  position: absolute;
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.decorImg1 {
+  top: 9%;
+  left: 0;
+  width: 128px;
+}
+
+.decorImg2 {
+  top: 8%;
+  right: 21%;
+  width: 62px;
+
+  animation-name: animDecor2;
+  animation-duration: 4s;
+}
+
+.decorImg3 {
+  top: 4%;
+  right: 3%;
+  width: 71px;
+}
+
+.decorImg4 {
+  top: 20%;
+  right: 0px;
+  z-index: 40;
+  width: 592px;
+}
+
+.decorImg5 {
+  top: 16%;
+  right: 5%;
+  z-index: 50;
+  width: 110px;
+
+  animation-name: animDecor5;
+  animation-duration: 12s;
+  animation-direction: normal;
+}
+
+.decorImg6 {
+  bottom: 25%;
+  left: 2%;
+  width: 73px;
+
+  animation-name: animDecor6;
+}
+
+.decorImg7 {
+  bottom: 0;
+  left: 0;
+  width: 280px;
+}
+
+.decorImg8 {
+  bottom: 8%;
+  left: 34%;
+  width: 85px;
+}
+
+.decorImg9 {
+  bottom: -13%;
+  right: 25%;
+  width: 228px;
+
+  animation-name: animDecor9;
+}
+
+@keyframes animDecor2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(30%, -2%, 0) scale(1.1);
+  }
+}
+
+@keyframes animDecor5 {
+  0% {
+    transform: rotate(0deg) translate3d(-20%, -20%, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(-20%, -20%, 0);
+  }
+}
+
+@keyframes animDecor6 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(60%, 60%, 0);
+  }
+}
+
+@keyframes animDecor9 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-3%, 5%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-7%, -7%, 0) scale(0.95);
+  }
 }
