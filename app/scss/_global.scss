@@ -30,3 +30,32 @@
 body {
   font-family: "DINPro";
 }
+
+.modalTop {
+  margin-bottom: 25px;
+}
+
+.counterParent {
+  counter-reset: num;
+}
+
+.listItem {
+  font-size: 25px;
+  counter-increment: num;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &::before {
+    content: counter(num);
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Gilroy-Extrabold";
+    color: #8cc9e8;
+  }
+
+  &:nth-child(-n + 9)::before {
+    content: "0" counter(num);
+  }
+}
