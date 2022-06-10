@@ -1,12 +1,34 @@
 .wrapper {
   background-image: url("../../../images/content/bg-2.jpg");
+  position: relative;
 }
 
 .content {
   padding: 129px 0 0 70px;
+  position: relative;
+  z-index: 40;
 }
 
 .title {
   max-width: 250px;
   margin-bottom: 44px;
+}
+
+.decorImage {
+  position: absolute;
+  top: 74px;
+  right: -52px;
+  z-index: 0;
+
+  width: 710px;
+  height: 680px;
+
+  transform: translate3d(15%, 10%, 0);
+  opacity: 0;
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transition: all 2.4s cubic-bezier(0, 0, 0.2, 1);
+  }
 }

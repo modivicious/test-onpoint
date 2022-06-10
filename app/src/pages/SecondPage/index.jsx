@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import CustomScrollBlock from "../../components/CustomScrollBlock";
+
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 import styles from "./SecondPage.module.scss";
 
 const SecondPage = () => {
+  const animRef = useRef("animation");
+  const entry = useIntersectionObserver(animRef, {});
+  const isVisible = !!entry?.isIntersecting;
+
   return (
     <div className={`${styles.wrapper} backgroundImage`}>
       <div className={styles.content}>
-        <span className={`mainSuptitle ${styles.title}`}>текст сообщения</span>
+        <span className={`mainSuptitle ${styles.title}`} ref={animRef}>
+          текст сообщения
+        </span>
         <CustomScrollBlock height="444px">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -39,6 +47,15 @@ const SecondPage = () => {
           </p>
         </CustomScrollBlock>
       </div>
+      <img
+        className={
+          isVisible
+            ? `${styles.decorImage} ${styles.active}`
+            : styles.decorImage
+        }
+        src="../../../images/content/SecondPage/1.png"
+        alt=""
+      />
     </div>
   );
 };
