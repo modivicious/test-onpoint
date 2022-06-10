@@ -71,12 +71,182 @@
   }
 }
 
+.foregroundImage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 290px;
+  height: 702px;
+  z-index: 40000;
+}
+
 .bottleImg {
   position: absolute;
   bottom: 0;
-  left: 10px;
-  z-index: 40000;
-  height: 703px;
-  width: 323px;
-  background-image: url("../../../images/content/bottle.png");
+  left: 17%;
+  z-index: 30;
+  width: 233px;
+}
+
+.bubble {
+  position: absolute;
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.bubble1 {
+  top: 0;
+  right: 19%;
+  width: 37px;
+
+  animation-name: bubble1;
+}
+
+.bubble2 {
+  top: 13%;
+  right: 13%;
+  z-index: 40;
+  width: 68px;
+
+  animation-name: bubble2;
+}
+
+.bubble3 {
+  top: 21%;
+  left: 27%;
+  width: 34px;
+
+  animation-name: bubble3;
+  animation-duration: 4s;
+}
+
+.bubble4 {
+  top: 36%;
+  right: -3%;
+  width: 112px;
+
+  animation-name: bubble4;
+}
+
+.bubble5 {
+  top: 55%;
+  left: 3%;
+  z-index: 40;
+  width: 33px;
+
+  animation-name: bubble5;
+}
+
+.bubble6 {
+  bottom: 20%;
+  left: 9%;
+  z-index: 40;
+  width: 74px;
+
+  animation-name: bubble6;
+  animation-duration: 2s;
+}
+
+.bubble7 {
+  bottom: 17%;
+  right: -5%;
+  width: 62px;
+
+  animation-name: bubble7;
+}
+
+.bubble8 {
+  bottom: -11%;
+  right: -12%;
+  z-index: 40;
+  width: 142px;
+
+  animation-name: bubble8;
+}
+
+@keyframes bubble1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(60%, 60%, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes bubble2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(20%, 40%, 0);
+  }
+}
+
+@keyframes bubble3 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(70%, 20%, 0);
+  }
+  100% {
+    transform: translate3d(-50%, -10%, 0);
+  }
+}
+
+@keyframes bubble4 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(15%, -20%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(0%, 10%, 0) scale(0.8);
+  }
+}
+
+@keyframes bubble5 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 20%, 0);
+  }
+}
+
+@keyframes bubble6 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-10%, -30%, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-5%, -50%, 0) scale(1.1);
+  }
+}
+
+@keyframes bubble7 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(10%, 20%, 0) scale(1.1);
+  }
+}
+
+@keyframes bubble8 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(10%, 10%, 0) scale(1.2);
+  }
 }

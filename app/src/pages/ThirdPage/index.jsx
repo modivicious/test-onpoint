@@ -88,10 +88,56 @@ const ThirdPage = () => {
         </div>
       </Modal>
       <div
-        className={`${styles.bottleImg} backgroundImage`}
+        className={styles.foregroundImage}
         onTouchStart={(e) => isModalActive && e.stopPropagation()}
         onTouchEnd={(e) => isModalActive && e.stopPropagation()}
-      />
+      >
+        <img
+          className={styles.bottleImg}
+          src="../../../images/content/bottle.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble1}`}
+          src="../../../images/content/ThirdPage/1.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble2}`}
+          src="../../../images/content/ThirdPage/2.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble3}`}
+          src="../../../images/content/ThirdPage/3.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble4}`}
+          src="../../../images/content/ThirdPage/4.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble5}`}
+          src="../../../images/content/ThirdPage/5.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble6}`}
+          src="../../../images/content/ThirdPage/6.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble7}`}
+          src="../../../images/content/ThirdPage/7.png"
+          alt=""
+        />
+        <img
+          className={`${styles.bubble} ${styles.bubble8}`}
+          src="../../../images/content/ThirdPage/8.png"
+          alt=""
+        />
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import SecondPage from "./pages/SecondPage";
 import ThirdPage from "./pages/ThirdPage";
 
 const App = () => {
-  const [activePage, setActivePage] = useState(0);
+  const [activePage, setActivePage] = useState(2);
 
   const changeActivePage = (index) => {
     setActivePage(index);
