@@ -54,7 +54,7 @@ const SecondPage = () => {
             ? `${styles.decorImage} ${styles.active}`
             : styles.decorImage
         }
-        src="../../../images/content/SecondPage/1.png"
+        src={require("../../../images/content/SecondPage/1.png")}
         alt=""
       />
     </div>

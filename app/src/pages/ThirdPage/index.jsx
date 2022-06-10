@@ -94,47 +94,47 @@ const ThirdPage = () => {
       >
         <img
           className={styles.bottleImg}
-          src="../../../images/content/ThirdPage/bottle.png"
+          src={require("../../../images/content/ThirdPage/bottle.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble1}`}
-          src="../../../images/content/ThirdPage/1.png"
+          src={require("../../../images/content/ThirdPage/1.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble2}`}
-          src="../../../images/content/ThirdPage/2.png"
+          src={require("../../../images/content/ThirdPage/2.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble3}`}
-          src="../../../images/content/ThirdPage/3.png"
+          src={require("../../../images/content/ThirdPage/3.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble4}`}
-          src="../../../images/content/ThirdPage/4.png"
+          src={require("../../../images/content/ThirdPage/4.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble5}`}
-          src="../../../images/content/ThirdPage/5.png"
+          src={require("../../../images/content/ThirdPage/5.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble6}`}
-          src="../../../images/content/ThirdPage/6.png"
+          src={require("../../../images/content/ThirdPage/6.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble7}`}
-          src="../../../images/content/ThirdPage/7.png"
+          src={require("../../../images/content/ThirdPage/7.png")}
           alt=""
         />
         <img
           className={`${styles.bubble} ${styles.bubble8}`}
-          src="../../../images/content/ThirdPage/8.png"
+          src={require("../../../images/content/ThirdPage/8.png")}
           alt=""
         />
       </div>
