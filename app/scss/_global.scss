@@ -1,3 +1,8 @@
+body {
+  font-family: "DINPro", sans-serif;
+  color: #171717;
+}
+
 .backgroundImage {
   background-repeat: no-repeat;
   background-size: cover;
@@ -5,14 +10,16 @@
 
 .mainSuptitle {
   display: inline-block;
-  font-family: "DINPro";
+
+  font-family: "DINPro", sans-serif;
   font-size: 27px;
   letter-spacing: 0.06em;
+  color: #242424;
   text-transform: uppercase;
 }
 
 .mainTitle {
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy-Regular", sans-serif;
   font-size: 95px;
   line-height: 1;
   letter-spacing: 0.12em;
@@ -20,15 +27,15 @@
 }
 
 .mainTitleBold {
-  font-family: "Gilroy-Extrabold";
+  font-family: "Gilroy-Extrabold", sans-serif;
+}
+
+.mainTextBold {
+  font-family: "DINPro-Bold", sans-serif;
 }
 
 .mainBoxShadow {
   box-shadow: 3px 4px 115px 9px rgba(157, 185, 198, 0.39);
-}
-
-body {
-  font-family: "DINPro";
 }
 
 .modalTop {
@@ -40,8 +47,10 @@ body {
 }
 
 .listItem {
-  font-size: 25px;
   counter-increment: num;
+
+  font-size: 25px;
+  color: #2e2e2e;
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -51,7 +60,8 @@ body {
     content: counter(num);
     display: block;
     margin-bottom: 5px;
-    font-family: "Gilroy-Extrabold";
+
+    font-family: "Gilroy-Extrabold", sans-serif;
     color: #8cc9e8;
   }
 

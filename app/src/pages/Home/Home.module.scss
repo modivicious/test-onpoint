@@ -15,28 +15,29 @@
 .suptitle {
   display: inline-block;
   margin-bottom: 18px;
-  font-family: "DINPro";
+
+  font-family: "DINPro", sans-serif;;
   font-size: 27px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .title {
-  font-family: "Gilroy-Light";
+  font-family: "Gilroy-Light", sans-serif;;
   font-size: 109px;
   line-height: 1.06;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
   .bold {
-    font-family: "Gilroy-Extrabold";
+    font-family: "Gilroy-Extrabold", sans-serif;;
   }
 }
 
 .btnWrapper {
   position: absolute;
   bottom: 17px;
-  right: 109px;
+  left: 561px;
 }
 
 .decorImg {

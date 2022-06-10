@@ -61,7 +61,7 @@ const CustomScrollBlock = ({ children, height }) => {
           onTouchMove={touchMove}
         />
       </div>
-      <div className={styles.contentBox}>
+      <div className={`${styles.contentBox} mainBoxShadow`}>
         <div className={styles.viewport}>
           <div
             className={styles.content}

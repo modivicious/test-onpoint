@@ -19,8 +19,9 @@ const SecondPage = () => {
         </span>
         <CustomScrollBlock height="444px">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
+            <span className="mainTextBold">Lorem ipsum dolor sit amet</span>,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. <br />
             Duis ut diam quam nulla. Mauris in aliquam sem fringilla ut morbi
             tincidunt. Vitae aliquet nec ullamcorper sit amet risus nullam eget
             felis. Nulla pharetra diam sit amet nisl. Eget nulla facilisi etiam

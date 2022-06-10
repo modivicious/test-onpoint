@@ -1,31 +1,34 @@
 .header {
   position: absolute;
-  top: 25px;
-  left: 70px;
+  top: 19px;
+  left: 57px;
   z-index: 10000;
+
   display: flex;
   align-items: center;
+
   & > *:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 19px;
   }
 }
 
 .homeBtn {
-  width: 22px;
-  height: 19px;
+  padding: 20px;
+
   background-image: url("../../../images/icons/home.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
 }
 
 .separator {
   width: 1px;
   height: 25px;
+
   background-color: #282828;
 }
 
 .name {
-  font-family: "Circe-Regular";
+  font-family: "Circe-Regular", sans-serif;;
   font-size: 17px;
   letter-spacing: 0.1em;
   text-transform: uppercase;

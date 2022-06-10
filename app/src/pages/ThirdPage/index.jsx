@@ -94,7 +94,7 @@ const ThirdPage = () => {
       >
         <img
           className={styles.bottleImg}
-          src="../../../images/content/bottle.png"
+          src="../../../images/content/ThirdPage/bottle.png"
           alt=""
         />
         <img

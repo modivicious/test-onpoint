@@ -95,6 +95,10 @@ const Slider = ({
             className={styles.sliderItem}
             onTouchStart={touchStart(index)}
             onTouchEnd={touchEnd}
+            onContextMenu={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
           >
             {item}
           </div>

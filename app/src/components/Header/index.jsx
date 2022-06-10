@@ -5,7 +5,12 @@ import styles from "./Header.module.scss";
 const Header = ({ changeActivePage }) => {
   return (
     <header className={styles.header}>
-      <button className={styles.homeBtn} onClick={() => changeActivePage(0)} />
+      <button
+        className={styles.homeBtn}
+        onClick={() => changeActivePage(0)}
+        aria-label="На главную"
+        type="button"
+      />
       <span className={styles.separator} />
       <span className={styles.name}>PROJECT</span>
     </header>
