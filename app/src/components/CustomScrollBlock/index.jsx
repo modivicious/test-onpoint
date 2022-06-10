@@ -6,12 +6,16 @@ const CustomScrollBlock = ({ children, height }) => {
   const startMovePos = useRef(0);
   const newTop = useRef(0);
   const thumbBottomEdge = useRef(0);
+  const maxContentScroll = useRef(0);
   const thumbRef = useRef("thumb");
   const contentRef = useRef("content");
 
   useLayoutEffect(() => {
     thumbBottomEdge.current =
       thumbRef.current.parentNode.offsetHeight - thumbRef.current.offsetHeight;
+    maxContentScroll.current =
+      contentRef.current.scrollHeight -
+      contentRef.current.parentNode.offsetHeight;
   }, []);
 
   const setContentScrollTo = (posY) => {
@@ -24,20 +28,15 @@ const CustomScrollBlock = ({ children, height }) => {
 
   const setContentPosition = () => {
     const thumbScrollRatio = newTop.current / thumbBottomEdge.current;
-    const maxContentScroll =
-      contentRef.current.scrollHeight -
-      contentRef.current.parentNode.offsetHeight;
-
-    setContentScrollTo(thumbScrollRatio * maxContentScroll);
+    setContentScrollTo(thumbScrollRatio * maxContentScroll.current);
   };
 
   const touchStart = (e) => {
-    startMovePos.current = e.touches[0].clientY;
+    startMovePos.current = Math.round(e.touches[0].clientY);
   };
 
   const touchMove = (e) => {
-    const currMovePos = e.touches[0].clientY;
-
+    const currMovePos = Math.round(e.touches[0].clientY);
     newTop.current += currMovePos - startMovePos.current;
 
     if (newTop.current < 0) newTop.current = 0;
